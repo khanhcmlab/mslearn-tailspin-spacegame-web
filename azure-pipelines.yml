@@ -35,7 +35,7 @@ steps:
 - script: './node_modules/.bin/sass $(wwwrootDir)/css/site.scss:$(wwwrootDir)/css/site.css'
   displayName: 'Compile Sass assets'
 
-- task: gulp@1
+- script: './node_modules/.bin/gulp'
   displayName: 'Run gulp tasks'
 
 - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
